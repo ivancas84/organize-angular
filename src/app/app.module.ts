@@ -6,30 +6,34 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
-import { MatSliderModule } from '@angular/material/slider';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { MatDividerModule } from '@angular/material/divider';
-import { MatGridListModule } from '@angular/material/grid-list';
+
+import { MenuComponent } from './component/menu/menu.component'
+
+import { SistemaAdminComponent } from './component/sistema-admin/sistema-admin/sistema-admin.component'
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+
+    MenuComponent,
+
+    SistemaAdminComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-    MatSliderModule,
+
+    MatToolbarModule,
     MatMenuModule,
     MatButtonModule,
     MatIconModule,
-    MatDividerModule,
-    MatGridListModule,
-
   ],
   providers: [],
   bootstrap: [AppComponent]
