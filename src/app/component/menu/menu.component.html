@@ -2,9 +2,11 @@
   <span>My App</span>
   
   <button mat-button [matMenuTriggerFor]="menu" aria-label="icon-button with menu icon">
-    Opciones
+    Administrar
   </button>
   <mat-menu #menu="matMenu">
+    <a mat-menu-item routerLink="/sistema-admin" routerLinkActive="active" title="Administrar Sistema">Sistema</a>
+
     <button mat-menu-item>Item 1</button>
     <button mat-menu-item>Item 2</button>
   </mat-menu>
