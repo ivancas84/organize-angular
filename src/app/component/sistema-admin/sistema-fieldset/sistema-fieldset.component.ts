@@ -37,9 +37,5 @@ export class SistemaFieldsetComponent extends FieldsetComponent {
 
   get id() { return this.fieldset.get('id')}
   get nombre() { return this.fieldset.get('nombre')}
-  get formacion() { return this.fieldset.get('formacion')}
-  get clasificacion() { return this.fieldset.get('clasificacion')}
-  get codigo() { return this.fieldset.get('codigo')}
-  get perfil() { return this.fieldset.get('perfil')}
 
 }
