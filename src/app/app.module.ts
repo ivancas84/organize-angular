@@ -13,25 +13,27 @@ import { ParserService } from '@service/parser/parser.service';
 import { ValidatorsService } from '@service/validators/validators.service';
 import { HttpClientModule } from '@angular/common/http';
 
-import { MatIconModule } from '@angular/material/icon';
+import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/material/core';
+
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
+import { DialogAlertComponent } from '@component/dialog-alert/dialog-alert.component';
 import { MenuComponent } from './component/menu/menu.component'
 
 import { SistemaAdminComponent } from './component/sistema-admin/sistema-admin/sistema-admin.component';
 import { SistemaFieldsetComponent } from './component/sistema-admin/sistema-fieldset/sistema-fieldset.component'
-import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/material/core';
-
-
 
 @NgModule({
   declarations: [
     AppComponent,
-
+    DialogAlertComponent,
     MenuComponent,
 
     SistemaAdminComponent,
@@ -47,12 +49,18 @@ import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/materi
 
     MatButtonModule,
     MatCardModule,
+    MatDialogModule,
     MatIconModule,
-    MatMenuModule,
-    MatToolbarModule,
     MatInputModule,
-    
+    MatMenuModule,
+    MatSnackBarModule,
+    MatToolbarModule,
+
   ],
+  entryComponents: [
+    DialogAlertComponent
+  ],
+
   providers: [
     DataDefinitionService, 
     DataDefinitionLoaderService, 
