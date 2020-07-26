@@ -27,6 +27,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { DialogAlertComponent } from '@component/dialog-alert/dialog-alert.component';
 import { MenuComponent } from './component/menu/menu.component'
 
+import { EntidadAdminComponent } from './component/entidad-admin/entidad-admin/entidad-admin.component';
+import { EntidadFieldsetComponent } from './component/entidad-admin/entidad-fieldset/entidad-fieldset.component'
+
 import { SistemaAdminComponent } from './component/sistema-admin/sistema-admin/sistema-admin.component';
 import { SistemaFieldsetComponent } from './component/sistema-admin/sistema-fieldset/sistema-fieldset.component'
 
@@ -35,6 +38,9 @@ import { SistemaFieldsetComponent } from './component/sistema-admin/sistema-fiel
     AppComponent,
     DialogAlertComponent,
     MenuComponent,
+
+    EntidadAdminComponent,
+    EntidadFieldsetComponent, 
 
     SistemaAdminComponent,
     SistemaFieldsetComponent,

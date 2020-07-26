@@ -1,0 +1,32 @@
+<mat-card [formGroup]="fieldset">
+  <mat-card-header>
+    <mat-card-title>Entidad</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px">
+      <mat-form-field fxFlex="auto">
+        <mat-label>Nombre</mat-label>
+        <input matInput formControlName="nombre" >
+        <div *ngIf="(nombre.touched || nombre.dirty) && nombre.invalid">
+          <mat-error *ngIf="nombre.hasError('required')">Debe completar valor</mat-error>
+        </div>
+      </mat-form-field>
+      <mat-form-field fxFlex="auto">
+        <mat-label>Alias</mat-label>
+        <input matInput formControlName="alias" >
+        <div *ngIf="(alias.touched || alias.dirty) && alias.invalid">
+          <mat-error *ngIf="alias.hasError('required')">Debe completar valor</mat-error>
+        </div>
+      </mat-form-field>
+  <!--div class="form-group row">
+    <label class="col-sm-2 col-form-label">Sistema</label>
+    <div class="col-sm-10">
+      <app-typeahead [field]="sistema" [entityName]="'sistema'"></app-typeahead>
+        <div *ngIf="(sistema.touched || sistema.dirty) && sistema.invalid">
+          <mat-error *ngIf="sistema.hasError('required')">Debe completar valor</mat-error>
+        </div>
+    </div>
+  </div-->
+    </div>
+  </mat-card-content>
+</mat-card>
