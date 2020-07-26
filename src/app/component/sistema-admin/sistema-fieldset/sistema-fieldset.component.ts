@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { FieldsetComponent } from '../../../core/component/fieldset/fieldset.component';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FieldsetComponent } from '@component/fieldset/fieldset.component';
+import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
+import { DataDefinitionService } from '@service/data-definition/data-definition.service';
+import { ValidatorsService } from '@service/validators/validators.service';
 import { Router } from '@angular/router';
-
-import { DataDefinitionService } from '../../../core/service/data-definition/data-definition.service';
-import { ValidatorsService } from '../../../core/service/validators/validators.service';
-import { SessionStorageService } from '../../../core/service/storage/session-storage.service';
+import { SessionStorageService } from '@service/storage/session-storage.service';
 
 @Component({
   selector: 'app-sistema-fieldset',
@@ -30,6 +29,7 @@ export class SistemaFieldsetComponent extends FieldsetComponent {
       id:null,
       nombre: [null, {
         validators: [Validators.required],
+        asyncValidators: [this.validators.unique('nombre', 'sistema')],
       }],
     });
     return fg;
