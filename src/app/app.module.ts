@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/material/core';
 
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -53,6 +54,7 @@ import { SistemaFieldsetComponent } from './component/sistema-admin/sistema-fiel
     BrowserAnimationsModule,
     FlexLayoutModule,
 
+    MatAutocompleteModule,
     MatButtonModule,
     MatCardModule,
     MatDialogModule,
