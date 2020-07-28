@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <a class="navbar-brand" routerLink="/">Organize</a>
+
+  <button class="navbar-toggler navbar-toggler-right" 
+          type="button" 
+          aria-controls="appNavigation" 
+          aria-expanded="!isCollapsed" 
+          aria-label="Toggle navigation" 
+          (click)="toggleMenu()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="appNavigation" [collapse]="isCollapsed">
+    <div class="navbar-nav mr-auto">
+      <!--a (click)="toggleMenu()" class="nav-item nav-link" routerLink="" routerLinkActive="active">Inicio</a-->
+
+
+      <div class="nav-item dropdown" dropdown>
+        <a class="nav-link dropdown-toggle" id="dropdownTools" dropdownToggle>Herramientas</a>
+        <div class="dropdown-menu" *dropdownMenu aria-labelledby="dropdownTools">
+          <a class="dropdown-item" routerLink="/crear-comisiones" routerLinkActive="active" title="Crear comisiones" (click)="toggleMenu()">Crear Comisiones</a>
+          <a class="dropdown-item" routerLink="/crear-horarios" routerLinkActive="active" title="Crear horarios" (click)="toggleMenu()">Crear Horarios</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

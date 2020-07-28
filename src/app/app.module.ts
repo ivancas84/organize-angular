@@ -9,20 +9,30 @@ import { AppComponent } from './app.component';
 
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
+
+import { MenuComponent } from '@component/menu/menu.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
 
     AccordionModule.forRoot(),
     BsDatepickerModule.forRoot(),
+    BsDropdownModule.forRoot(),
+    CollapseModule.forRoot(),
     TypeaheadModule.forRoot(),
   ],
   providers: [],
