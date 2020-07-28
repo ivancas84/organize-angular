@@ -24,14 +24,19 @@ export class SistemaFieldsetComponent extends FieldsetComponent {
     super(router, storage);
   }
 
+  prueba: FormControl
+
   formGroup(): FormGroup {
     let fg: FormGroup = this.fb.group({
       id:null,
       nombre: [null, {
-        validators: [Validators.required],
+        validators: [Validators.required, Validators.minLength(4)],
         asyncValidators: [this.validators.unique('nombre', 'sistema')],
       }],
     });
+
+    this.prueba = new FormControl(null,{validators:fg.get("nombre").validator})
+    console.log(fg.get("nombre").validator);
     return fg;
   }
 
