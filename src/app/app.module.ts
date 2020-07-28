@@ -25,7 +25,16 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSnackBarModule, MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
+import { LabelPipe } from '@pipe/label.pipe';
+import { ToDatePipe } from '@pipe/to-date.pipe';
+import { ToTimePipe } from '@pipe/to-time.pipe';
+import { SiNoPipe } from '@pipe/si-no.pipe';
+import { StoragePipe } from '@pipe/storage.pipe';
+import { SummaryPipe } from '@pipe/summary.pipe';
+
 import { DialogAlertComponent } from '@component/dialog-alert/dialog-alert.component';
+import { InputAutocompleteComponent } from '@component/input-autocomplete/input-autocomplete.component';
+
 import { MenuComponent } from './component/menu/menu.component'
 
 import { EntidadAdminComponent } from './component/entidad-admin/entidad-admin/entidad-admin.component';
@@ -36,8 +45,11 @@ import { SistemaFieldsetComponent } from './component/sistema-admin/sistema-fiel
 
 @NgModule({
   declarations: [
+    LabelPipe, ToDatePipe, ToTimePipe, SiNoPipe, SummaryPipe, StoragePipe,
+
     AppComponent,
     DialogAlertComponent,
+    InputAutocompleteComponent,
     MenuComponent,
 
     EntidadAdminComponent,
